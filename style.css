@@ -1,0 +1,106 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+  background: radial-gradient(#0f2027,#203a43,#2c5364);
+  color:white;
+  text-align:center;
+  overflow:hidden;
+}
+
+/* COUNTDOWN */
+#countdown{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.timer{
+  font-size:3rem;
+  margin:20px;
+  letter-spacing:3px;
+  color:#ffd700;
+}
+
+#ramzan{
+  display:none;
+  height:100vh;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:15px;
+  background: radial-gradient(#1b5e20,#0d3b12);
+}
+
+
+/* PROFILE IMAGE */
+.profile{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid gold;
+  box-shadow:0 0 25px gold;
+  animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+  50%{transform:translateY(-12px);}
+}
+
+/* 3D TEXT */
+.threeD{
+  font-size:3.5rem;
+  color:#ffd700;
+  text-shadow:
+    1px 1px 0 #caa300,
+    2px 2px 0 #b59400,
+    3px 3px 0 #9e8200,
+    4px 4px 10px rgba(0,0,0,0.6);
+  animation:pop 2s infinite alternate;
+}
+
+@keyframes pop{
+  from{transform:scale(1);}
+  to{transform:scale(1.05);}
+}
+
+/* NAME */
+#ramzan h2{
+  font-size:1.5rem;
+  color:#ffffff;
+}
+
+/* DUA */
+.dua{
+  max-width:600px;
+  font-size:1.1rem;
+  color:#e0ffe0;
+  line-height:1.6;
+  padding:0 20px;
+}
+/* REVEAL CONTAINER */
+.reveal{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:15px;
+
+  opacity:0;
+  transform:translateY(80px);
+  animation:slideUp 2.5s ease-out forwards;
+}
+
+/* SLIDE UP ANIMATION */
+@keyframes slideUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
