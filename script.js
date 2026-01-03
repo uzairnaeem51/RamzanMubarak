@@ -1,5 +1,5 @@
 // 🔔 SET RAMZAN START DATE (CHANGE YEAR IF NEEDED)
-const ramzanDate = new Date("February 16, 2026 00:00:00").getTime();
+const ramadanDate = new Date("February 16, 2026 00:00:00").getTime();
 
 const timer = document.getElementById("timer");
 const countdown = document.getElementById("countdown");
@@ -7,11 +7,11 @@ const ramzan = document.getElementById("ramzan");
 
 setInterval(()=>{
   const now = new Date().getTime();
-  const diff = ramzanDate - now;
+  const diff = ramadanDate - now;
 
   if(diff <= 0){
     countdown.style.display = "none";
-    ramzan.style.display = "flex";
+    ramadan.style.display = "flex";
     return;
   }
 
@@ -23,3 +23,4 @@ setInterval(()=>{
   timer.innerText =
     `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
 },1000);
+
