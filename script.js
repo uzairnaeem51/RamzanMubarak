@@ -4,7 +4,7 @@
 const ramzanDate = new Date("February 18, 2026 00:00:00").getTime();
 
 // 🔒 FIXED DAYS (as requested)
-const FIXED_DAYS = 39;
+const FIXED_DAYS = 38;
 
 const timer = document.getElementById("timer");
 const countdown = document.getElementById("countdown");
@@ -33,10 +33,8 @@ setInterval(() => {
     ${seconds} Seconds
     <br><br>
     <small>
-      🌙 Moon Sighting Notice:<br>
-      Tentative start: <b>Feb 18, 2026</b><br>
-      Final confirmation after sunset <b>Feb 17</b><br>
-      Possible shift to <b>Feb 19</b>
+      🌙 Creating by Muhammad Uzair Naeem:<br>
     </small>
   `;
 }, 1000);
+
