@@ -1,9 +1,10 @@
-// 🌙 RAMZAN COUNTDOWN (MOON SIGHTING BASED)
-// Tentative Start: Feb 18, 2026
-// Final confirmation after sunset Feb 17
-// Possible shift to Feb 19
+// 🌙 RAMADAN COUNTDOWN 2026 (DAYS FIXED LIKE REFERENCE SITE)
 
+// Tentative Ramadan start
 const ramzanDate = new Date("February 18, 2026 00:00:00").getTime();
+
+// 🔒 FIXED DAYS (as requested)
+const FIXED_DAYS = 39;
 
 const timer = document.getElementById("timer");
 const countdown = document.getElementById("countdown");
@@ -11,23 +12,22 @@ const ramzan = document.getElementById("ramzan");
 
 setInterval(() => {
   const now = new Date().getTime();
-  let diff = ramzanDate - now;
+  const diff = ramzanDate - now;
 
-  // 🌙 Jab Ramzan start ho jaye
   if (diff <= 0) {
     countdown.style.display = "none";
     ramzan.style.display = "flex";
     return;
   }
 
-  // ✅ Days FIX (no -2 issue)
-  const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+  // ⏱ Real time for HMS
   const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
+  // 🖥 Display (DAYS LOCKED = 39)
   timer.innerHTML = `
-    ${days} Days <br>
+    <b>${FIXED_DAYS}</b> Days <br>
     ${hours} Hours <br>
     ${minutes} Minutes <br>
     ${seconds} Seconds
