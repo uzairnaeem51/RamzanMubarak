@@ -4,7 +4,7 @@
 const ramzanDate = new Date("February 18, 2026 00:00:00").getTime();
 
 // 🔒 FIXED DAYS (as requested)
-const FIXED_DAYS = 38;
+const FIXED_DAYS = 39;
 
 const timer = document.getElementById("timer");
 const countdown = document.getElementById("countdown");
@@ -37,4 +37,5 @@ setInterval(() => {
     </small>
   `;
 }, 1000);
+
 
